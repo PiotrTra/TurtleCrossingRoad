@@ -2,6 +2,7 @@ from turtle import Screen
 from player import Player
 from car import Car
 import time
+import random
 
 screen = Screen()
 
@@ -19,9 +20,12 @@ screen.listen()
 screen.onkey(player.up, "Up")
 
 while game_is_on:
+    number_to_create_car = random.randint(0, 24)
     car.move_car()
-    time.sleep(1)
-    car.create_car()
+    time.sleep(0.1)
+    if number_to_create_car % 2 == 0 and number_to_create_car % 3 == 0:
+        car.create_car()
+        screen.update()
     screen.update()
 
 screen.exitonclick()

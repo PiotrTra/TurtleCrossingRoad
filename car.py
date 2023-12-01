@@ -2,7 +2,7 @@ import time
 from turtle import Turtle
 import random
 
-CARS_COLORS = ["yellow", "green", "blue", "pink", "black", "purple","orange"]
+CARS_COLORS = ["yellow", "green", "blue", "pink", "black", "purple", "orange"]
 STARTING_X = 290
 
 
@@ -25,9 +25,7 @@ class Car(Turtle):
         self.cars.append(new_car)
 
     def move_car(self):
-        for car in range(0, len(self.cars) - 1):
-            new_x = self.cars[car].xcor() - 1
-            new_y = self.cars[car].ycor()
-            self.cars[car].goto(new_x, new_y)
-
-
+        for car in self.cars:
+            new_x = car.xcor() - 5
+            new_y = car.ycor()
+            car.goto(new_x, new_y)
