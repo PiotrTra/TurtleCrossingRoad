@@ -13,3 +13,6 @@ class Player(Turtle):
     def up(self):
         new_y = self.ycor() + 20
         self.goto(0, new_y)
+
+    def restart(self):
+        self.goto(0, -280)

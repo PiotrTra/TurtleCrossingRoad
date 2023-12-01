@@ -9,7 +9,8 @@ STARTING_X = 290
 class Car(Turtle):
     def __init__(self):
         super().__init__()
-        self.color("white")
+        self.speed = 10
+        self.ht()
         self.cars = []
         self.random_y = 0
         self.random_color = None
@@ -26,6 +27,9 @@ class Car(Turtle):
 
     def move_car(self):
         for car in self.cars:
-            new_x = car.xcor() - 5
+            new_x = car.xcor() - self.speed
             new_y = car.ycor()
             car.goto(new_x, new_y)
+
+    def increase_speed(self):
+        self.speed += 10
