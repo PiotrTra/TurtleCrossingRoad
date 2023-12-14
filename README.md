@@ -6,6 +6,4 @@ Crossing Road is a simple arcade game implemented in Python using the Turtle gra
 
 - **Player Control:** Use arrow keys to control the player character.
 - **Traffic:** Navigate through moving vehicles and avoid collisions.
-- **Scoring:** Earn points for successfully crossing the road without accidents.
-- **Obstacles:** Encounter challenging obstacles to make the game more engaging.
 - **Object-Oriented Design:** Utilizes OOP principles for clear code structure and scalability.
